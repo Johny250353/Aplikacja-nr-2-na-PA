@@ -28,7 +28,10 @@
     <string name="irzut">ilość rzutów:</string>
     <string name="rzut">RZUT!</string>
     <string name="wyczysc">Wyczyść Historie</string>
+    <string name="wróć">Cofni</string>
 
+    <string name="specjalnaK">Specjalną kość:</string>
     <string name="DodKarte">Zmień karte posaci</string>
+    <string name="Cecha">Cecha:</string>
 
 </resources>

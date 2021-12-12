@@ -7,6 +7,29 @@
     android:background="#3C3C3C"
     tools:context=".Hub">
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Cecha"
+        android:textColor="#4DB6AC"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/radioButton5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/radioButton4" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -74,10 +97,10 @@
         android:id="@+id/button_rzut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:text="@string/rzut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/numberPicker2"
+        app:layout_constraintStart_toStartOf="@+id/numberPicker1" />
 
     <TextView
         android:id="@+id/textView2"
@@ -85,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="@string/iscianek"
         android:textColor="#4DB6AC"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="@+id/radioButton"
         app:layout_constraintStart_toStartOf="@+id/radioButton" />
 
@@ -94,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/sztbki"
         android:textColor="#4DB6AC"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +129,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Mody"
         android:textColor="#4DB6AC"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="@+id/radioButton3"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toEndOf="@+id/radioButton" />
@@ -165,15 +188,16 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="@string/irzut"
         android:textColor="#4DB6AC"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/radioButton5"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <ListView
         android:layout_width="391dp"
-        android:layout_height="356dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,46 +207,67 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/wyczysc"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_rzut" />
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:visibility="visible"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="@+id/radioButton5"
-        app:layout_constraintStart_toStartOf="@+id/radioButton"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/DodKarte"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/radioButton5"
-        app:layout_constraintStart_toStartOf="@+id/radioButton" />
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/wróć"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.NumberPicker
+        android:id="@+id/numberPicker1"
+        android:layout_width="82dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></android.widget.NumberPicker>
+
+    <android.widget.NumberPicker
+        android:id="@+id/numberPicker2"
+        android:layout_width="82dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"></android.widget.NumberPicker>
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner4"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/specjalnaK"
+        android:textColor="#4DB6AC"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
