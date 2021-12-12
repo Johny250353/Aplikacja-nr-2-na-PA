@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ApkanaPA</string>
+
+    <string name="witaj">Witaj w aplikacji do rzutu kostką</string>
+    <string name="podaj_imie">Wpisz swoje imie ponieżej:</string>
+    <string name="imie">Imie:</string>
+    <string name="dodaj_imie">dodaj</string>
+
+    <string name="Graj">Graj!</string>
+
+    <string name="sztbki">Szybkie rzuty:</string>
+    <string name="k2">K2</string>
+    <string name="k4">K4</string>
+    <string name="k6">K6</string>
+    <string name="k8">K8</string>
+    <string name="k10">K10</string>
+    <string name="k20">K20</string>
+    <string name="k100">K100</string>
+
+    <string name="Mody">Modyfikatory:</string>
+    <string name="mod20">+20</string>
+    <string name="modM20">-20</string>
+    <string name="mod10">+10</string>
+    <string name="modM10">-10</string>
+    <string name="mod0">+0</string>
+
+    <string name="iscianek">ilość ścianek:</string>
+    <string name="irzut">ilość rzutów:</string>
+    <string name="rzut">RZUT!</string>
+    <string name="wyczysc">Wyczyść Historie</string>
+
+    <string name="DodKarte">Zmień karte posaci</string>
+
+</resources>
