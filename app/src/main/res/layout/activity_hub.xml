@@ -29,7 +29,7 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/k2"
+        android:text="@string/ks6"
         android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
@@ -40,21 +40,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/k2"
+        android:text="@string/ks4"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="@+id/numberPicker3"
         app:layout_constraintTop_toBottomOf="@+id/numberPicker9" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/k2"
+        android:text="@string/ks8"
         android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="@+id/textView10" />
 
     <android.widget.NumberPicker
@@ -69,10 +70,10 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/k2"
+        android:text="@string/k10"
         android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/numberPicker4"
         app:layout_constraintStart_toStartOf="@+id/textView9" />
 
     <android.widget.NumberPicker
@@ -387,10 +388,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="48dp"
-        android:text="MultiAutoCompleteTextView"
+        android:text="@string/tu"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberPicker12" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edycjakosci"
+        app:layout_constraintEnd_toEndOf="@+id/numberPicker13"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="507dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

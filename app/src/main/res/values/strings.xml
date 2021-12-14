@@ -20,6 +20,11 @@
     <string name="k10">K10</string>
     <string name="k20">K20</string>
     <string name="k100">K100</string>
+    <string name="ks4">KS4</string>
+    <string name="ks6">KS6</string>
+    <string name="ks8">KS8</string>
+    <string name="ks10">KS10</string>
+    <string name="edycjakosci">Edytuj Kostki</string>
 
     <string name="Mody">Modyfikatory:</string>
     <string name="mod20">+20</string>
@@ -46,6 +51,9 @@
     <string name="specjalnaK">Specjalną kość:</string>
     <string name="DodKarte">Zmień karte posaci</string>
     <string name="Cecha">Cecha:</string>
-    <string name="switch">Switch</string>
+    <string name="switc">karta</string>
+
+
+    <string name="tu">tu bedzie historia rzutow</string>
 
 </resources>
