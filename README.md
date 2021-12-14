@@ -18,11 +18,4 @@ Założenia Aplikacji
 
 -6. generator postaci tzn losowanie statystyk do kart postaci z kilku systemow
 
-
-opcjonalnie
-albo
-
--7. opcja wgrania pliku z statystykami i przechowywania ich na osobnych plikach???
-albo
-
--8. postaram się zrobić połaczenie z innym telefonem w technologii BT albo innej ale to opcjonalne
+-7. zapisuje karty postawci w bazie danych pewnie SQL lite
