@@ -25,7 +25,7 @@
         android:id="@+id/textView_podajimie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="280dp"
         android:text="@string/podaj_imie"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,9 +66,31 @@
         android:layout_height="103dp"
         android:layout_marginBottom="200dp"
         android:backgroundTint="#272727"
-        android:onClick="sendMessage"
+
         android:text="@string/Graj"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:minHeight="48dp"
+        android:text="@string/karta"
+        app:layout_constraintBottom_toTopOf="@+id/textView_podajimie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CZYkarta"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    android:onClick="sendMessage"
 </androidx.constraintlayout.widget.ConstraintLayout>

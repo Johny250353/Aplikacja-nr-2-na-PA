@@ -1,14 +1,18 @@
 <resources>
-    <string name="app_name">ApkanaPA</string>
+    <string name="app_name">ApkanaPA</string> //nazwa aplikacji
 
     <string name="witaj">Witaj w aplikacji do rzutu kostką</string>
-    <string name="podaj_imie">Wpisz swoje imie ponieżej:</string>
+    <string name="CZYkarta">Czy chcesz używać karty postaci?</string>
+    <string name="karta">Karta</string>
+    <string name="podaj_imie">Wpisz imie postaci ponieżej:</string>
     <string name="imie">Imie:</string>
     <string name="dodaj_imie">dodaj</string>
 
     <string name="Graj">Graj!</string>
 
-    <string name="sztbki">Szybkie rzuty:</string>
+    <string name="k">kości</string>
+    <string name="Plus">+</string>
+    <string name="Minus">-</string>
     <string name="k2">K2</string>
     <string name="k4">K4</string>
     <string name="k6">K6</string>
@@ -30,8 +34,18 @@
     <string name="wyczysc">Wyczyść Historie</string>
     <string name="wróć">Cofni</string>
 
+    <string-array name="cech">
+        <item>atak</item>
+        <item>obrona</item>
+        <item>witalność</item>
+        <item>strzał</item>
+        <item>unik</item>
+        <item>Odporność</item>
+    </string-array>
+
     <string name="specjalnaK">Specjalną kość:</string>
     <string name="DodKarte">Zmień karte posaci</string>
     <string name="Cecha">Cecha:</string>
+    <string name="switch">Switch</string>
 
 </resources>
