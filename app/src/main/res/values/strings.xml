@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">ApkanaPA</string> //nazwa aplikacji
+    <string name="app_name">ApkanaPA</string>
+    //nazwa aplikacji
 
     <string name="witaj">Witaj w aplikacji do rzutu kostką</string>
     <string name="CZYkarta">Czy chcesz używać karty postaci?</string>
@@ -55,5 +56,39 @@
 
 
     <string name="tu">tu bedzie historia rzutow</string>
+    <string name="title_activity_profil_kart">profilKart</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="WW">WW:</string>
+    <string name="US">US:</string>
+    <string name="K">K:</string>
+    <string name="Odp">Odp:</string>
+    <string name="Zr">Zr:</string>
+    <string name="Int">Int:</string>
+    <string name="SW">SW:</string>
+    <string name="Ogd">Ogd:</string>
+
+    <string name="Zapisz">Zapisz</string>
+
+    <string name="jeden">1</string>
+    <string name="dwa">2</string>
+    <string name="trzy">3</string>
+    <string name="cztery">4</string>
+    <string name="piec">5</string>
+    <string name="szesc">6</string>
+    <string name="siedem">7</string>
+    <string name="osiem">8</string>
+    <string name="dziewiec">9</string>
+    <string name="dziesiec">10</string>
+
+    <string name="losuj">losuj</string>
+
 
 </resources>

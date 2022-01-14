@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApkanaPA">
         <activity
+            android:name=".ModyfikacjaKosci"
+            android:exported="false" />
+        <activity
+            android:name=".profilPostaci"
+            android:exported="false" />
+        <activity
             android:name=".Hub"
             android:exported="false" />
         <activity

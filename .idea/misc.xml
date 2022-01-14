@@ -5,8 +5,16 @@
       <map>
         <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3587962962962963" />
         <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3587962962962963" />
-        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/activity_hub.xml" value="0.33" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/activity_hub.xml" value="0.22" />
         <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/activity_modyfikacja_kosci.xml" value="0.5" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/activity_profil_kart.xml" value="0.34444444444444444" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/activity_profil_postaci.xml" value="0.34444444444444444" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/content_profil_kart.xml" value="0.34444444444444444" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/fragment_first.xml" value="0.34444444444444444" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/layout/fragment_second.xml" value="0.19490740740740742" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3587962962962963" />
+        <entry key="..\:/Users/JaHost/AndroidStudioProjects/ApkanaPA/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3587962962962963" />
       </map>
     </option>
   </component>
