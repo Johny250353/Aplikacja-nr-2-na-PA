@@ -25,12 +25,12 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:text="@string/ks4"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber17" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberK2" />
 
     <TextView
         android:id="@+id/textView13"
@@ -108,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="@string/k4"
+        android:text="@string/k3"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
@@ -213,6 +213,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#272727"
+        android:onClick="OnClickButtonRzut"
         android:text="@string/rzut"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button9"
@@ -222,18 +223,18 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="@string/specjalnaK"
         android:textColor="#FFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber15" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberK10" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:onClick="OnClickButtonClear"
         android:backgroundTint="#272727"
         android:text="@string/wyczysc"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -274,23 +275,36 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#272727"
         android:onClick="OnClickButton3"
         android:text="@string/edycjakosci"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber11" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="394dp"
-        android:layout_height="219dp"
-        android:text="TextView"
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/button_rzut"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.468">
+
+        <TextView
+            android:id="@+id/Historia"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:textColor="#FFFFFF" />
+    </ScrollView>
 
     <EditText
         android:id="@+id/editTextNumber11"
@@ -298,6 +312,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
@@ -309,94 +324,103 @@
         android:layout_height="44dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber13"
+        android:id="@+id/editTextNumberK8"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber14"
+        android:id="@+id/editTextNumberK10"
         android:layout_width="59dp"
         android:layout_height="41dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber15"
+        android:id="@+id/editTextNumberK20"
         android:layout_width="60dp"
         android:layout_height="41dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber16"
+        android:id="@+id/editTextNumberK100"
         android:layout_width="79dp"
         android:layout_height="41dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber17"
+        android:id="@+id/editTextNumberK2"
         android:layout_width="41dp"
         android:layout_height="43dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber18"
+        android:id="@+id/editTextNumberK3"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber19"
+        android:id="@+id/editTextNumberK4"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextNumber20"
+        android:id="@+id/editTextNumberK6"
         android:layout_width="40dp"
         android:layout_height="42dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
