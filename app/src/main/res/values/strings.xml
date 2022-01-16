@@ -28,7 +28,7 @@
     <string name="ks10">KS10</string>
     <string name="edycjakosci">Edytuj Kostki</string>
 
-    <string name="Mody">Modyfikatory:</string>
+    <string name="Mody">Mody:</string>
     <string name="mod20">+20</string>
     <string name="modM20">-20</string>
     <string name="mod10">+10</string>
@@ -42,12 +42,14 @@
     <string name="wróć">Cofni</string>
 
     <string-array name="cech">
-        <item>atak</item>
-        <item>obrona</item>
-        <item>witalność</item>
-        <item>strzał</item>
-        <item>unik</item>
-        <item>Odporność</item>
+        <item>WW</item>
+        <item>US</item>
+        <item>K</item>
+        <item>Odp</item>
+        <item>Zr</item>
+        <item>Int</item>
+        <item>SW</item>
+        <item>Ogd</item>
     </string-array>
 
     <string name="specjalnaK">Specjalną kość:</string>
