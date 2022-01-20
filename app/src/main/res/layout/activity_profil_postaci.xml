@@ -8,13 +8,40 @@
     tools:context=".profilPostaci">
 
     <TextView
+        android:id="@+id/textView17"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/imie"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <EditText
+        android:id="@+id/editText_imie2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
         android:id="@+id/textView26"
         android:layout_width="43dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="@string/WW"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +51,7 @@
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
         android:text="@string/US"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView26"
         app:layout_constraintStart_toStartOf="@+id/textView26"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
@@ -35,7 +62,7 @@
         android:layout_height="29dp"
         android:layout_marginTop="16dp"
         android:text="@string/Odp"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView25"
         app:layout_constraintStart_toStartOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -46,7 +73,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         android:text="@string/K"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView23"
         app:layout_constraintStart_toStartOf="@+id/textView23"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -57,7 +84,7 @@
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
         android:text="@string/Int"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -68,7 +95,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         android:text="@string/Ogd"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView21"
         app:layout_constraintStart_toStartOf="@+id/textView21"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
@@ -79,7 +106,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         android:text="@string/SW"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView20"
         app:layout_constraintStart_toStartOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
@@ -90,7 +117,7 @@
         android:layout_height="29dp"
         android:layout_marginTop="16dp"
         android:text="@string/Zr"
-        android:textColor="#4DB6AC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView24"
         app:layout_constraintStart_toStartOf="@+id/textView24"
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
@@ -104,20 +131,19 @@
         android:onClick="OnClickButton51"
         android:text="@string/wróć"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:backgroundTint="#272727"
+        android:onClick="OnClickButtonZapisz"
         android:text="@string/Zapisz"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -244,6 +270,17 @@
         app:layout_constraintEnd_toEndOf="@+id/editTextOgd"
         app:layout_constraintStart_toStartOf="@+id/textView22" />
 
+    <Button
+        android:id="@+id/PushButtonUsuń"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#272727"
+        android:onClick="OnClickUsuńKarte"
+        android:text="@string/Usuń"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

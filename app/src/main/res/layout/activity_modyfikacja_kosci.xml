@@ -11,11 +11,11 @@
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/ks4"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,12 +68,13 @@
         android:id="@+id/textView32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="@string/ks6"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintEnd_toEndOf="@+id/textView31"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     <TextView
         android:id="@+id/textView33"
@@ -142,27 +143,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonZapisz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:onClick="OnClickButtonZapiszKosci"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#272727"
         android:text="@string/Zapisz"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
-        app:layout_constraintStart_toStartOf="@+id/textView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView31"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:backgroundTint="#272727"
-        android:text="@string/Zapisz"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName10"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="@+id/textView38"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
     <Button
@@ -177,12 +166,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextKS4_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="nazwa ścianki"
+        android:hint="@string/Scianka"
+        android:inputType="none"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView28"
         app:layout_constraintEnd_toEndOf="parent"
@@ -190,12 +179,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextKS4_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView29"
         app:layout_constraintEnd_toEndOf="parent"
@@ -203,12 +192,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editTextKS4_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView30"
         app:layout_constraintEnd_toEndOf="parent"
@@ -216,12 +205,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editTextKS4_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
         app:layout_constraintEnd_toEndOf="parent"
@@ -229,12 +218,12 @@
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/editTextKS6_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView33"
         app:layout_constraintEnd_toEndOf="parent"
@@ -242,12 +231,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/editTextKS6_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
         app:layout_constraintEnd_toEndOf="parent"
@@ -255,12 +244,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/editTextKS6_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView35"
         app:layout_constraintEnd_toEndOf="parent"
@@ -268,12 +257,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/editTextKS6_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView36"
         app:layout_constraintEnd_toEndOf="parent"
@@ -281,12 +270,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/editTextKS6_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView37"
         app:layout_constraintEnd_toEndOf="parent"
@@ -294,12 +283,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/editTextKS6_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/Scianka"
         android:inputType="textPersonName"
-        android:text="nazwa ścianki"
         android:textColor="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView38"
         app:layout_constraintEnd_toEndOf="parent"

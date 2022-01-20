@@ -5,8 +5,8 @@
     <string name="witaj">Witaj w aplikacji do rzutu kostką</string>
     <string name="CZYkarta">Czy chcesz używać karty postaci?</string>
     <string name="karta">Karta</string>
-    <string name="podaj_imie">Wpisz imie postaci ponieżej:</string>
-    <string name="imie">Imie:</string>
+    <string name="podaj_imie">Wpisz imie ponieżej:</string>
+    <string name="imie">Imie Postaci:</string>
     <string name="dodaj_imie">dodaj</string>
 
     <string name="Graj">Graj!</string>
@@ -93,5 +93,7 @@
 
     <string name="losuj">losuj</string>
 
+    <string name="Usuń">Usuń</string>
+    <string name="Scianka">Nazwa ścianki</string>
 
 </resources>

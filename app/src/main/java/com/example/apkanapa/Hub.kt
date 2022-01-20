@@ -7,18 +7,26 @@ import android.os.PersistableBundle
 import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.widget.*
+import androidx.room.Room
 import com.example.apkanapa.databinding.ActivityMainBinding
 
 class Hub : AppCompatActivity() {
 
-    var imie: String = "" //ustala wartosc imienia na null jakby nie zostalo wpisane
+    companion object {
+        var KS4: Array<String> = emptyArray()
+        var KS6: Array<String> = emptyArray()
+        var imieGacza: String = ""
+    }
+
+
+
+
     lateinit var wyborstat : Spinner //deklaracja spinnera do wyboru cech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hub)
 
-        imie = intent.getStringExtra("imie").toString() //wpisuje imie z mainactivity i przypisuje te wartosc do zmiennej imie
 
         val pisz = findViewById<TextView>(R.id.Historia) //przypisanie funkcji pisania do okna z historią rzutow
 
@@ -62,6 +70,7 @@ class Hub : AppCompatActivity() {
         val p10 = findViewById<RadioButton>(R.id.radioButtonp10)
         val m10 = findViewById<RadioButton>(R.id.radioButtonm10)
 
+        var suma = 0
 
         var mod = 0
 
@@ -106,7 +115,7 @@ class Hub : AppCompatActivity() {
             {
                 k2 = 1
             }
-
+            suma = suma + k2
             pisz.append("${k2},")
 
         }
@@ -127,7 +136,7 @@ class Hub : AppCompatActivity() {
 
                 k3=1
             }
-
+            suma = suma + k3
             pisz.append("${k3}, ")
 
         }
@@ -148,6 +157,7 @@ class Hub : AppCompatActivity() {
             {
                 k4=1
             }
+            suma = suma + k4
             pisz.append("${k4}, ")
 
         }
@@ -167,6 +177,7 @@ class Hub : AppCompatActivity() {
             {
                 k6=1
             }
+            suma = suma + k6
             pisz.append("${k6}, ")
 
         }
@@ -185,6 +196,7 @@ class Hub : AppCompatActivity() {
             if(k8<1){
                 k8=1
             }
+            suma = suma + k8
             pisz.append("${k8}, ")
 
         }
@@ -203,6 +215,7 @@ class Hub : AppCompatActivity() {
             if (k10<1){
                 k10=1
             }
+            suma = suma + k10
             pisz.append("${k10}, ")
 
         }
@@ -222,6 +235,7 @@ class Hub : AppCompatActivity() {
             if (k20<1){
                 k20=1
             }
+            suma = suma + k20
             pisz.append("${k20}, ")
 
         }
@@ -241,16 +255,108 @@ class Hub : AppCompatActivity() {
             if (k100<1){
                 k100=1
             }
+            suma = suma + k100
             pisz.append("${k100}, ")
 
         }
+
+        var ileks4 = findViewById<EditText>(R.id.editTextKS4)
+        var iks4 = ileks4.text.toString()
+        var intiks4 = 0
+        if (iks4 != "")
+        {
+            intiks4 = iks4.toInt()
+        }
+
+        if (Hub.KS4.size == 4) {
+            for (i in 1..intiks4) {
+                var ks4 = (0..3).random()
+
+
+
+                pisz.append("${Hub.KS4[ks4]}, ")
+
+            }
+        }
+
+        var ileks6 = findViewById<EditText>(R.id.editTextKS6)
+        var iks6 = ileks6.text.toString()
+        var intiks6 = 0
+        if (iks6 != "")
+        {
+            intiks6 = iks6.toInt()
+        }
+
+        if (Hub.KS6.size == 6) {
+            for (i in 1..intiks6) {
+                var ks6 = (0..5).random()
+
+
+
+                pisz.append("${Hub.KS6[ks6]}, ")
+
+            }
+        }
+
+        pisz.append("suma rzutów: ${suma} ")
+
         val czyswitch = findViewById<Switch>(R.id.switch2)
 
         if(czyswitch.isChecked) {
-            pisz.append("${imie}\n")
+
+            pisz.append("Gracz: ${imieGacza}\n")
+
+            var imieEditText = findViewById<EditText>(R.id.editTextwybierzimie)
+            var imie = imieEditText.text.toString()
+
+            val db = Room.databaseBuilder(
+                this,
+                AppDatabase::class.java, "AppDatabase"
+            ).allowMainThreadQueries().build()
+
+            val playerCartDao = db.playerCartDao()
+
+            val cart = playerCartDao.findByName(imie)
+            if (cart == null){
+                Toast.makeText(this, "Karta nie istnieje", Toast.LENGTH_LONG).show()
+
+                return
+            }
+
+            Toast.makeText(this, "Działa pomyślnie karty!", Toast.LENGTH_LONG).show()
+
+            var wartoscSpiner = findViewById<Spinner>(R.id.spinner)
+            var spinn = wartoscSpiner.selectedItem.toString()
+
+            if(spinn == "WW") {
+                pisz.append("WW Twoje wynosi: ${cart.WW}\n")
+            }
+            else if(spinn == "US") {
+                pisz.append("US Twoje wynosi: ${cart.US}\n")
+            }
+            else if(spinn == "K") {
+                pisz.append("K Twoje wynosi: ${cart.K}\n")
+            }
+            else if(spinn == "Odp") {
+                pisz.append("Odp Twoje wynosi: ${cart.Odp}\n")
+            }
+            else if(spinn == "Zr") {
+                pisz.append("Zr Twoje wynosi: ${cart.Zr}\n")
+            }
+            else if(spinn == "Int") {
+                pisz.append("Int Twoje wynosi: ${cart.Int}\n")
+            }
+            else if(spinn == "SW") {
+                pisz.append("SW Twoje wynosi: ${cart.SW}\n")
+            }
+            else if(spinn == "Ogd") {
+                pisz.append("Ogd Twoje wynosi: ${cart.Ogd}\n")
+            }
+
         }
         else {
             pisz.append("..\n")
+            Toast.makeText(this, "Nie używasz karty", Toast.LENGTH_LONG).show()
         }
 
 

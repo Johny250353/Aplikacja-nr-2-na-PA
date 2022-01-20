@@ -15,10 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
     }
-
 
     fun OnClickButton(view: android.view.View) {
         var pierwszePrzejscie = Intent(
@@ -28,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         val pst = findViewById<EditText>(R.id.editText_imie)  //linija do odnajdywania edittextu i ustawiajaca tam napis
         var imie = pst.text.toString()
-        pierwszePrzejscie.putExtra("imie", imie)
+        Hub.imieGacza = imie
 
         startActivity(pierwszePrzejscie)
 
