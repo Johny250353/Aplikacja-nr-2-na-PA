@@ -10,12 +10,12 @@ Założenia Aplikacji
 
 -2. aplikacja ma możliwość przypisania imienia(ksywy) do informacji o rzucie 
 
--3. aplikacja ma opcje dodania kilku własnych kostek (przypsujac zamiast cyfr na sciankach to symbole)
+-3. aplikacja ma opcje dodania kilku własnych kostek (przypsujac zamiast cyfr na sciankach to nazwy)
 
 -4. wolał bym by wyniki były w formie tekstowej a nie rzutu kością 3d z symulowaną fizyką ze względu na czytelność
 
 -5. możliwosc dodania kart postaci? np. DND, WH4ed, CoC ???
 
--6. generator postaci tzn losowanie statystyk do kart postaci z kilku systemow
+-6. generator postaci tzn losowanie statystyk do kart postaci
 
 -7. zapisuje karty postawci w bazie danych pewnie SQL lite
