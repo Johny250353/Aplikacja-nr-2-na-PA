@@ -25,7 +25,7 @@ class profilPostaci : AppCompatActivity() {
 
     fun OnclickButtonStat(view: android.view.View) {
 
-        var WW = (25..50).random()
+        var WW = (25..50).random() //losuje wartosc
 
         val funkcjaWW = findViewById<EditText>(R.id.editTextWW)
         funkcjaWW.setText("${WW}")
@@ -142,7 +142,7 @@ class profilPostaci : AppCompatActivity() {
             intOgd = Ogd.toInt()
         }
 
-        val newCard = PlayerCart(imie,intWW,intUS,intK,intOdp,intZr,intInt,intSW,intOgd)
+        val newCard = PlayerCart(imie,intWW,intUS,intK,intOdp,intZr,intInt,intSW,intOgd) //dodaje karte z tymi parametrami
         playerCartDao.insert(newCard)
 
         Toast.makeText(this, "Karta dodana", Toast.LENGTH_LONG).show()

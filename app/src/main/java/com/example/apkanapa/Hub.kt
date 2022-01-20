@@ -13,9 +13,9 @@ import com.example.apkanapa.databinding.ActivityMainBinding
 class Hub : AppCompatActivity() {
 
     companion object {
-        var KS4: Array<String> = emptyArray()
+        var KS4: Array<String> = emptyArray() //deklaracja zmiennych globalnych z czego array to listy
         var KS6: Array<String> = emptyArray()
-        var imieGacza: String = ""
+        var imieGacza: String = "" //zeruje wartosc jak by uzytkownik nie przypisal imienia graacza
     }
 
 
@@ -28,14 +28,14 @@ class Hub : AppCompatActivity() {
         setContentView(R.layout.activity_hub)
 
 
-        val pisz = findViewById<TextView>(R.id.Historia) //przypisanie funkcji pisania do okna z historią rzutow
+        val pisz = findViewById<TextView>(R.id.Historia) //powiazuje funkcje pisz z edit textem historia
 
-        pisz.setMovementMethod(ScrollingMovementMethod()) //linijka do scrolowania historii
+        pisz.setMovementMethod(ScrollingMovementMethod()) //scroll
 
-        wyborstat = findViewById(R.id.spinner) //przypisuje wartosc spinnera do zmiennej zdeklarowanej w linijce 14
-        val Cech = resources.getStringArray(R.array.cech) //deklaracja do funkcji spinnera
+        wyborstat = findViewById(R.id.spinner) //znajduje wartosc ustawioną na spinnerze
+        val Cech = resources.getStringArray(R.array.cech) //deklaracja i przypisuje wartosc spinnera
         if (wyborstat != null){
-            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, Cech)
+            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, Cech) //to jest by zmiennic wartosc spinnera
             wyborstat.adapter = adapter
         }
 
@@ -44,25 +44,23 @@ class Hub : AppCompatActivity() {
 
 
 
-    fun OnClickButton3(view: View) {
+    fun OnClickButton3(view: View) { //po kiknieciu przechodzi do pola modyfikacji kosci
         var trzeciePrzejscie = Intent(
             this,
-            ModyfikacjaKosci::class.java
-        ) //to ma przejsc program do nastepnego okna modyfikacji kosci
+            ModyfikacjaKosci::class.java)
         startActivity(trzeciePrzejscie)
     }
 
-    fun OnClickButton31(view: View) {
+    fun OnClickButton31(view: View) { //pole przejscia do okna startowego
         var trzeciePowrot = Intent(
             this,
-            MainActivity::class.java
-        ) //to ma przejsc program do nastepnego okna Poczatkowego
+            MainActivity::class.java)
         startActivity(trzeciePowrot)
     }
 
-    fun OnClickButtonRzut(view: View) {
+    fun OnClickButtonRzut(view: View) { //po kilknieciu rzut
 
-        val pisz = findViewById<TextView>(R.id.Historia)
+        val pisz = findViewById<TextView>(R.id.Historia) //deklaracja i przypisanie do wigetow
 
         val p20 = findViewById<RadioButton>(R.id.radioButtonp20)
         val m20 = findViewById<RadioButton>(R.id.radioButtonm20)
@@ -74,15 +72,15 @@ class Hub : AppCompatActivity() {
 
         var mod = 0
 
-        if(p20.isChecked)
+        if(p20.isChecked) //jesli zmienna którą przypisalismy powyzej do radiobuttona jest zaznaczona to wykonuje sie czynnosc nizej
         {
-            mod = 20
+            mod = 20 //przypisuje wartosc 20 do zmiennej mod
         }
         if(p10.isChecked)
         {
             mod = 10
         }
-        if(p0.isChecked)
+        if(p0.isChecked) //istnieje tylko dla tego ze radioboxa nie da sie odklikac by zaden nie byl zaznaczony
         {
             mod = 0
         }
@@ -98,25 +96,25 @@ class Hub : AppCompatActivity() {
 
 
 
-        var ilek2 = findViewById<EditText>(R.id.editTextNumberK2)
-        var ik2 = ilek2.text.toString()
-        var intik2 = 0
-        if (ik2 != "")
+        var ilek2 = findViewById<EditText>(R.id.editTextNumberK2) //wartosc z edit textu gdzie piszemy ilosc kostek jest przypisywana do ilek2
+        var ik2 = ilek2.text.toString() //wartosc z ilek2 jest przypisywana jako string do wartosci ik2
+        var intik2 = 0 //zerujemy i deklarujemy nastepną zmienną
+        if (ik2 != "") //sprawdzamy czy ktos cos wpisal jak tak to zmiennimy string w int przypisujac wartosc na intik2
         {
             intik2 = ik2.toInt()
         }
 
-        for (i in 1..intik2) {
+        for (i in 1..intik2) { //wszystko w nawiasie wykona sie do tylu razy ile wpisano w okienku edit text
 
-            var k2 = (1..2).random()
+            var k2 = (1..2).random() //wartosc k2 jest liczbą losową z zakresu w nawiasie
 
-            k2 = k2+mod
-            if(k2<1)
+            k2 = k2+mod //szybkie dodawanie by uwzglednic modyfikatory
+            if(k2<1) //zabezpieczenie jak by modyfikator byl ujemny
             {
                 k2 = 1
             }
-            suma = suma + k2
-            pisz.append("${k2},")
+            suma = suma + k2 //dodawanie by sumowac wynik rzutow
+            pisz.append("${k2},") //wypisanie w historii rzutow wartosc wylosowaną k2
 
         }
 
@@ -268,14 +266,11 @@ class Hub : AppCompatActivity() {
             intiks4 = iks4.toInt()
         }
 
-        if (Hub.KS4.size == 4) {
+        if (Hub.KS4.size == 4) { //sprawdza czy wszystkie scianki mają nazwe
             for (i in 1..intiks4) {
-                var ks4 = (0..3).random()
-
-
+                var ks4 = (0..3).random() //tu jest od 0 a nie od 1 bo tabele numeruje sie od 0
 
                 pisz.append("${Hub.KS4[ks4]}, ")
-
             }
         }
 
@@ -291,22 +286,19 @@ class Hub : AppCompatActivity() {
             for (i in 1..intiks6) {
                 var ks6 = (0..5).random()
 
-
-
                 pisz.append("${Hub.KS6[ks6]}, ")
-
             }
         }
 
-        pisz.append("suma rzutów: ${suma} ")
+        pisz.append("suma rzutów: ${suma} ") //wypisuje sume rzutow
 
-        val czyswitch = findViewById<Switch>(R.id.switch2)
+        val czyswitch = findViewById<Switch>(R.id.switch2) //switch
 
-        if(czyswitch.isChecked) {
+        if(czyswitch.isChecked) { //sprawdza czy switch na layoucie jest zaznaczony
 
-            pisz.append("Gracz: ${imieGacza}\n")
+            pisz.append("Gracz: ${imieGacza}\n") //wypisuje imie gracza
 
-            var imieEditText = findViewById<EditText>(R.id.editTextwybierzimie)
+            var imieEditText = findViewById<EditText>(R.id.editTextwybierzimie) //sprawdza czy jest plik od bazy sqllite
             var imie = imieEditText.text.toString()
 
             val db = Room.databaseBuilder(
@@ -318,7 +310,7 @@ class Hub : AppCompatActivity() {
 
             val cart = playerCartDao.findByName(imie)
             if (cart == null){
-                Toast.makeText(this, "Karta nie istnieje", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Karta nie istnieje", Toast.LENGTH_LONG).show() //text message
 
                 return
             }
@@ -328,8 +320,8 @@ class Hub : AppCompatActivity() {
             var wartoscSpiner = findViewById<Spinner>(R.id.spinner)
             var spinn = wartoscSpiner.selectedItem.toString()
 
-            if(spinn == "WW") {
-                pisz.append("WW Twoje wynosi: ${cart.WW}\n")
+            if(spinn == "WW") { //sprawdza czy spinner jest ustawiont na ww
+                pisz.append("WW Twoje wynosi: ${cart.WW}\n") //jak tak to wypisuje text i wartosc ww na zapisaną w karcie
             }
             else if(spinn == "US") {
                 pisz.append("US Twoje wynosi: ${cart.US}\n")
@@ -355,14 +347,14 @@ class Hub : AppCompatActivity() {
 
         }
         else {
-            pisz.append("..\n")
+            pisz.append("..\n") //jestli nie uzywamy karty tzn switch off
             Toast.makeText(this, "Nie używasz karty", Toast.LENGTH_LONG).show()
         }
 
 
     }
 
-    fun OnClickButtonClear(view: View) {
+    fun OnClickButtonClear(view: View) { //czysci edittext historii
 
         val Clear = findViewById<TextView>(R.id.Historia)
         Clear.setText("")

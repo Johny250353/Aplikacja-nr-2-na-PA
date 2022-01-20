@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             Hub::class.java
         ) //to ma przejsc program do nastepnego okna Hub
 
-        val pst = findViewById<EditText>(R.id.editText_imie)  //linija do odnajdywania edittextu i ustawiajaca tam napis
+        val pst = findViewById<EditText>(R.id.editText_imie)
         var imie = pst.text.toString()
         Hub.imieGacza = imie
 
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun OnClickButton2(view: android.view.View) { //
+    fun OnClickButton2(view: android.view.View) {
         var drugiePrzejscie = Intent(
             this,
             profilPostaci::class.java
@@ -41,5 +41,3 @@ class MainActivity : AppCompatActivity() {
 
 
 }
-
-

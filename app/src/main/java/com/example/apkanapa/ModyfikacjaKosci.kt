@@ -52,10 +52,10 @@ class ModyfikacjaKosci : AppCompatActivity() {
         val editKS6_6 = findViewById<EditText>(R.id.editTextKS6_6)
         var KS6_6 = editKS6_6.text.toString()
 
-        val KS4Array = arrayOf(KS4_1,KS4_2,KS4_3,KS4_4)
+        val KS4Array = arrayOf(KS4_1,KS4_2,KS4_3,KS4_4) //tworzymy tablice dla wartosci z nawiuasy
         val KS6Array = arrayOf(KS6_1,KS6_2,KS6_3,KS6_4,KS6_5,KS6_6)
 
-        Hub.KS4 = KS4Array
+        Hub.KS4 = KS4Array //urzyczamy zmiennych innemu layoutowi
         Hub.KS6 = KS6Array
     }
 }

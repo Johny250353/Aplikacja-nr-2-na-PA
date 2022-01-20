@@ -2,10 +2,10 @@ package com.example.apkanapa
 
 import androidx.room.*
 
-@Entity
+@Entity //obiekty
 data class PlayerCart(
-    @PrimaryKey val Name: String,
-    @ColumnInfo(name = "WW") val WW: Int?,
+    @PrimaryKey val Name: String, //pierwsza kolumna takiego jakby id plikow do ktorych w nastepnych kolumnach przypisane beda wartosci
+    @ColumnInfo(name = "WW") val WW: Int?, //kolumna zmiennej ww w ktorej beda te wartosci w formie inta
     @ColumnInfo(name = "US") val US: Int?,
     @ColumnInfo(name = "K") val K: Int?,
     @ColumnInfo(name = "Odp") val Odp: Int?,
@@ -15,19 +15,19 @@ data class PlayerCart(
     @ColumnInfo(name = "Ogd") val Ogd: Int?
 )
 
-@Dao
+@Dao //sposob dzialania takie komenty zapytan
 interface PlayerCartDao {
     @Query("SELECT * FROM playercart")
-    fun getAll(): List<PlayerCart>
+    fun getAll(): List<PlayerCart> //wczytuje wszystko z list playercart
 
     @Query("SELECT * FROM playercart WHERE name = :name limit 1")
-    fun findByName(name: String): PlayerCart
+    fun findByName(name: String): PlayerCart //znajduje dane wartosci z listy
 
     @Insert
-    fun insert(cart: PlayerCart)
+    fun insert(cart: PlayerCart) //zapisuje liste wartosci
 
     @Delete
-    fun delete(cart: PlayerCart)
+    fun delete(cart: PlayerCart) //usuwa liste wartosci
 }
 
 @Database(entities = [PlayerCart::class], version = 1)
